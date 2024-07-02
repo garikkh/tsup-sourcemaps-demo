@@ -28,5 +28,7 @@ the `dist` folder contents are deleted and tsup generates fresh .js.map files co
 
 1. This issue does not exist in `swc`, can be tested using the same steps as above
 and `build:swc` script instead of `build`.
-2. If the existing `.js.map` file is invalidated in some way (syntax errors, invalid characters)
+2. Also tested with `esbuild` using `build:esbuild` script, and the issue does NOT exist 
+with esbuild either.
+3. If the existing `.js.map` file is invalidated in some way (syntax errors, invalid characters)
 it will discard it and generate a fresh, correct map file as expected.

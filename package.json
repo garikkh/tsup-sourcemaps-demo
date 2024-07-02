@@ -5,6 +5,7 @@
   "devDependencies": {
     "@swc/cli": "^0.4.0",
     "@swc/core": "^1.6.6",
+    "esbuild": "^0.23.0",
     "tsup": "^8.1.0",
     "typescript": "^5.5.3"
   },
@@ -12,6 +13,7 @@
     "build": "tsup index.ts",
     "build:clean": "tsup index.ts --clean",
     "build:swc": "swc index.ts -s --out-file dist/index.js",
+    "build:esbuild": "esbuild index.ts --sourcemap=external --outfile=dist/index.js",
     "watch": "tsup index.ts --watch",
     "watch:clean": "tsup index.ts --watch --clean"
   },
