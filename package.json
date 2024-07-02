@@ -3,13 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "devDependencies": {
+    "@swc/cli": "^0.4.0",
     "@swc/core": "^1.6.6",
     "tsup": "^8.1.0",
     "typescript": "^5.5.3"
   },
   "scripts": {
     "build": "tsup index.ts",
-    "watch": "tsup index.ts --watch"
+    "build:clean": "tsup index.ts --clean",
+    "build:swc": "swc index.ts -s --out-file dist/index.js",
+    "watch": "tsup index.ts --watch",
+    "watch:clean": "tsup index.ts --watch --clean"
   },
   "author": "",
   "license": "ISC"

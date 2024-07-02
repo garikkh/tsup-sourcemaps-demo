@@ -18,3 +18,15 @@ To workaround this issue, you need to use `clean` option in `tsup`.
 the correct `sourcesContent`.
 
 The same can be observed with running `npm run watch`.
+
+## clean=True workaround
+
+Following the same steps as above, if the scripts `build:clean` or `watch:clean` are used,
+the `dist` folder contents are deleted and tsup generates fresh .js.map files correctly.
+
+## Extra Notes
+
+1. This issue does not exist in `swc`, can be tested using the same steps as above
+and `build:swc` script instead of `build`.
+2. If the existing `.js.map` file is invalidated in some way (syntax errors, invalid characters)
+it will discard it and generate a fresh, correct map file as expected.
