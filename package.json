@@ -8,7 +8,8 @@
     "typescript": "^5.5.3"
   },
   "scripts": {
-    "build": "tsup index.ts"
+    "build": "tsup index.ts",
+    "watch": "tsup index.ts --watch"
   },
   "author": "",
   "license": "ISC"
